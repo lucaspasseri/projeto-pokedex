@@ -12,7 +12,7 @@ export function PokemonsProvider({ children }) {
 
     useEffect(() => {
         updatePokemons();
-    }, [token?.token]);
+    }, [token?.token, updatePokemons]);
 
     function updatePokemons() {
         axios.get(`${process.env.REACT_APP_API_BASE_URL}/pokemons`, {
